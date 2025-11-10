@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+:root {
+    --cor01: #F5F5F5;
+    --cor02: #c0c0c0;
+    --cor03: #3D3D3D;
+    --cor04: #990000;
+    --cor05: #DBA900;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--cor02);
+}
+
+header {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto auto;
+    padding: 10px;
+    margin: 10px;
+    border: 3px dotted red;
+}
+
+header > img.logo {
+    grid-area: 1 / 1 / 3 / 2;
+
+
+    border-radius: 8px;
+
+    background-color: var(--cor03);
+}
+
+header > h1 {
+
+    background-color: var(--cor04);
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px 0px;
+    grid-area: 1/ 2 / 2 / 2;
+}
+
+header > nav {
+    grid-area: 2 / 2 / 3 / 3;
+
+    display: flex;
+    justify-content: stretch;
+}
+
+header > nav > a {
+    padding: 8px;
+    margin: 2px;
+
+    background-color: var(--cor04);
+    color: var(--cor05);
+
+    height: 30px;
+    width: 25%;
+    border-radius: 5px;
+    
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+
+    transition: background-color 0.2s;
+}
+
+header > nav > a:hover {
+    background-color: var(--cor05);
+    color: var(--cor04);
+}
+
+main div.campo {
+    display: flex;
+    justify-content: stretch;
+    height: 40px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > input[type=text] {
+    margin: 0px 0px 0px auto;
+    width: 80%;
+    border-radius: 6px 0px 0px 6px;
+    background-color: var(--cor01);
+    border: 1px solid var(--cor03);
+}
+
+div.campo > button[type=submit] {
+    margin: 0px auto 0px 0px;
+    width: 10%;
+    font-size: 25px;
+    border-radius: 0px 6px 6px 0px;
+
+    background-color: var(--cor03);
+    border: 1px solid var(--cor03);
+    color: var(--cor01);
+    font-weight: bold;
+}
+
+section#carros {
+    display: grid;
+    grid-template-columns: 1fr 90vw 1fr;
+    padding: 14px;
+    background-color: var(--cor02);
+    
+}
+
+div.container{
+    height: 400px;
+
+    padding: 5px;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end:3 ;
+
+    
+}
+
+div.item {
+    display: grid;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    
+    grid-template-rows: 50% 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 20% 20% 1fr 20% 20% 1fr;
+    gap: 3px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.438);
+    background-color: var(--cor01);
+
+}
+
+div > .img {
+    grid-area: 1 / 2 / 2 / 7;
+    border: 1px dashed blue;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+div > .modelo {
+    grid-area: 2 / 2 / 3 / 7;
+    padding: 5px;
+    border: 1px dashed blue;
+    background-color: var(--cor03);
+    border-radius: 6px;
+}
+
+div > .ano {
+    grid-area: 3 / 2 / 4 / 4 ;
+    padding: 5px;
+    border: 1px dashed blue;
+    background-color: var(--cor02);
+    border-radius: 6px;
+}
+
+div > .motor {
+    grid-area: 3 / 5 / 4 / 7;
+    padding: 5px;
+    border: 1px dashed blue;
+    background-color: var(--cor02);
+    border-radius: 6px;
+}
+
+div > .valor {
+    grid-area: 4 / 2 / 5 / 4;
+    padding: 5px;
+    border: 1px dashed blue;
+    background-color: var(--cor02);
+    border-radius: 6px;
+}
+
+div > .km {
+    grid-area: 4 / 5 / 5 / 7;
+    padding: 5px;
+    border: 1px dashed blue;
+    background-color: var(--cor02);
+    border-radius: 6px;
+}
+
+div > .negociar {
+    grid-area: 5 / 3 / 6 / 6;
+    padding: 5px;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+
+    color: var(--cor01);
+    background-color: var(--cor04);
+
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px black;
+
+    transition: background-color 0.4s, color 0.4s;
+}
+
+div > .negociar:hover {
+    background-color: var(--cor01);
+    color: var(--cor04);
+    outline: 1px solid var(--cor04);
+}
